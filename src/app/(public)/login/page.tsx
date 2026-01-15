@@ -1,5 +1,6 @@
 import { MailIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 
@@ -12,19 +13,21 @@ export default function Home() {
       </div>
 
       <div className="mt-auto pb-10 flex flex-col gap-4">
-        <Button variant="outline" className="h-12 rounded-lg relative">
+        <Button variant="outline" className="h-12 rounded-3xl">
           <Image src="/icons/naver.svg" alt="네이버" width={20} height={20} />
           네이버로 계속하기
         </Button>
 
-        <Button variant="outline" className="h-12 rounded-lg relative">
+        <Button variant="outline" className="h-12 rounded-3xl">
           <Image src="/icons/kakao.svg" alt="네이버" width={20} height={20} />
           카카오로 계속하기
         </Button>
 
-        <Button variant="outline" className="h-12 rounded-lg relative">
-          <MailIcon className="w-4 h-4 text-muted-foreground" />
-          이메일로 계속하기
+        <Button asChild variant="outline" className="h-12 w-full rounded-3xl">
+          <Link href="/sign-up/email">
+            <MailIcon className="w-4 h-4 text-muted-foreground" />
+            이메일로 계속하기
+          </Link>
         </Button>
 
         <p className="mt-6 text-xs text-muted-foreground text-center">
