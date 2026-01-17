@@ -30,7 +30,12 @@ export default function Home() {
     politics: '',
   });
 
-  console.log(profileData);
+  const toggleSelection = (key: keyof ProfileData, value: string) => {
+    setProfileData((prev) => ({
+      ...prev,
+      [key]: prev[key] === value ? '' : value,
+    }));
+  };
 
   return (
     <div>
@@ -50,7 +55,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.pet === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, pet: code })}
+                onClick={() => toggleSelection('pet', code)}
               >
                 {label}
               </Badge>
@@ -66,7 +71,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.exercise === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, exercise: code })}
+                onClick={() => toggleSelection('exercise', code)}
               >
                 {label}
               </Badge>
@@ -82,7 +87,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.alcohol === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, alcohol: code })}
+                onClick={() => toggleSelection('alcohol', code)}
               >
                 {label}
               </Badge>
@@ -98,7 +103,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.smoking === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, smoking: code })}
+                onClick={() => toggleSelection('smoking', code)}
               >
                 {label}
               </Badge>
@@ -114,7 +119,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.job === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, job: code })}
+                onClick={() => toggleSelection('job', code)}
               >
                 {label}
               </Badge>
@@ -130,7 +135,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.religion === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, religion: code })}
+                onClick={() => toggleSelection('religion', code)}
               >
                 {label}
               </Badge>
@@ -146,7 +151,7 @@ export default function Home() {
                 key={code}
                 variant={profileData.politics === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => setProfileData({ ...profileData, politics: code })}
+                onClick={() => toggleSelection('politics', code)}
               >
                 {label}
               </Badge>
