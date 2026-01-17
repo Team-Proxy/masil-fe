@@ -9,17 +9,24 @@ interface KeyboardAwareButtonProps {
   className?: string;
 }
 
+const KEYBOARD_THRESHOLD = 150; // 키보드로 간주할 최소 높이 차이 (픽셀 단위)
+
 export function KeyboardAwareButton({ children, className }: KeyboardAwareButtonProps) {
   useEffect(() => {
+    // Visual Viewport API
+    // 키보드가 열릴때, 주소창이 나타나거나 사라질때 height이 줄어듦
     const viewport = window.visualViewport;
     if (!viewport) return;
 
     const resizeHandler = () => {
+      // innerHeight - viewport.height 값이 커지면
+      // 화면 하단이 무언가(키보드 or 주소창)에 의해 가려졌다는 뜻
       const offset = window.innerHeight - viewport.height;
-      // viewport.height === innerHeight 일 때는 키보드가 닫힌 상태로 간주 or 음수면 주소창 변화로 간주
-      // 키보드가 열리면 innerHeight > viewport.height -> offset > 0
-      // 가려진 높이 계산
-      document.documentElement.style.setProperty('--keyboard-offset', offset > 0 ? `${offset}px` : '0px');
+      // 주소창 변화는 offset이 작고, 소프트 키보드는 offset이 크게 발생하므로
+      // 일정 threshold 이상일 때만 "키보드 열림"으로 판단한다
+      const isKeyboardOpen = offset > KEYBOARD_THRESHOLD;
+      // 키보드가 실제로 열린 경우에만 하단 고정 버튼을 키보드 높이만큼 위로 이동시킨다
+      document.documentElement.style.setProperty('--keyboard-offset', isKeyboardOpen ? `${offset}px` : '0px');
     };
 
     resizeHandler();
@@ -34,7 +41,7 @@ export function KeyboardAwareButton({ children, className }: KeyboardAwareButton
   return (
     <div
       className={cn(
-        'fixed inset-x-0 bottom-0',
+        'bg-background fixed inset-x-0 bottom-0',
         'mx-auto w-full max-w-105 p-4',
         'pb-[calc(env(safe-area-inset-bottom)+16px)]',
         className,
