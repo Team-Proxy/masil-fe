@@ -27,7 +27,7 @@ export default async function SignupLayout({ children }: { children: React.React
     <>
       <div>
         <Progress value={(currentStep / totalStep) * 100} className="rounded-none" />
-        <div className="flex items-center justify-between text-muted-foreground">
+        <div className="text-muted-foreground flex items-center justify-between">
           <span>
             <PreviousButton />
           </span>
