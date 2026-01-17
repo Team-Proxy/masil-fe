@@ -35,7 +35,7 @@ export function KeyboardAwareButton({ children, className }: KeyboardAwareButton
     <div
       className={cn(
         'fixed inset-x-0 bottom-0',
-        'mx-auto w-full max-w-97.5 p-4',
+        'mx-auto w-full max-w-105 p-4',
         'pb-[calc(env(safe-area-inset-bottom)+16px)]',
         className,
       )}

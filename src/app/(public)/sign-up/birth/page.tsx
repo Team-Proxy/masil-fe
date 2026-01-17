@@ -11,25 +11,25 @@ export default function Home() {
       <p className="text-muted-foreground pb-4 text-sm">
         프로필에는 생일이 아닌 만나이가 표시됩니다.
         <br />
-        ex) 1990 / 01 / 01
+        예) 1990 / 01 / 01
       </p>
-      <div className="flex gap-2">
+      <div className="w-full">
         <InputOTP maxLength={8}>
           <InputOTPGroup>
-            <InputOTPSlot index={0} />
-            <InputOTPSlot index={1} />
-            <InputOTPSlot index={2} />
-            <InputOTPSlot index={3} />
+            <InputOTPSlot index={0} className="h-8 w-8" />
+            <InputOTPSlot index={1} className="h-8 w-8" />
+            <InputOTPSlot index={2} className="h-8 w-8" />
+            <InputOTPSlot index={3} className="h-8 w-8" />
           </InputOTPGroup>
           <span className="text-muted-foreground px-1">/</span>
           <InputOTPGroup>
-            <InputOTPSlot index={4} />
-            <InputOTPSlot index={5} />
+            <InputOTPSlot index={4} className="h-8 w-8" />
+            <InputOTPSlot index={5} className="h-8 w-8" />
           </InputOTPGroup>
           <span className="text-muted-foreground px-1">/</span>
           <InputOTPGroup>
-            <InputOTPSlot index={6} />
-            <InputOTPSlot index={7} />
+            <InputOTPSlot index={6} className="h-8 w-8" />
+            <InputOTPSlot index={7} className="h-8 w-8" />
           </InputOTPGroup>
         </InputOTP>
       </div>

@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <h1 className="pb-6">성별을 선택해 주세요.</h1>
       <p className="text-muted-foreground pb-4 text-sm">서비스 이용을 위한 기본 정보입니다.</p>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <Button
           type="button"
           variant="outline"
