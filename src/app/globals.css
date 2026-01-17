@@ -142,4 +142,16 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+  }
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+  }
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: 500;
+  }
 }
