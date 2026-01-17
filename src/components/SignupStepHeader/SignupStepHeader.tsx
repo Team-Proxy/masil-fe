@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 
-import { PreviousButton } from '@/components/previous-button/PreviousButton';
+import { PreviousButton } from '@/components/SignupStepHeader/PreviousButton';
 import { Progress } from '@/components/ui/progress';
 
 const STEP_MAP: Record<string, number> = {
@@ -20,7 +20,7 @@ const STEP_MAP: Record<string, number> = {
   '/sign-up/profile-image': 8,
 };
 
-export function ProgressBar() {
+export function SignupStepHeader() {
   const pathname = usePathname();
   const currentStep = STEP_MAP[pathname] || 0;
   const totalStep = 8;

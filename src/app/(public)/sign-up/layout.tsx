@@ -1,9 +1,9 @@
-import { ProgressBar } from '@/components/progress-bar/ProgressBar';
+import { SignupStepHeader } from '@/components/SignupStepHeader/SignupStepHeader';
 
 export default async function SignupLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ProgressBar />
+      <SignupStepHeader />
       <div className="p-4">{children}</div>
     </>
   );

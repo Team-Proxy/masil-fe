@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { KeyboardAwareButton } from '@/components/keyboard-aware-button/KeyboardAwareButton';
+import { KeyboardAwareButton } from '@/components/KeyboardAwareButton/KeyboardAwareButton';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 

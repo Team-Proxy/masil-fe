@@ -1,5 +1,3 @@
-'use client';
-
 import { ChevronLeftIcon } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 
@@ -29,7 +27,7 @@ export function PreviousButton() {
 
   return (
     <button type="button" onClick={handlePrevious} className="cursor-pointer">
-      <ChevronLeftIcon className="w-8 h-8" />
+      <ChevronLeftIcon className="h-8 w-8" />
     </button>
   );
 }
