@@ -9,7 +9,7 @@ const STEP_MAP: Record<string, number> = {
   '/sign-up/email': 1,
   '/sign-up/nickname': 2,
   '/sign-up/birth': 3,
-  '/sign-up/profile-basic': 4,
+  '/sign-up/gender': 4,
   '/sign-up/marital-status': 5,
   '/sign-up/marital-status/children': 5,
   '/sign-up/distance': 6,
