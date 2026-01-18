@@ -9,6 +9,7 @@ const eslintConfig = defineConfig([
   prettier,
   ...nextTs,
   {
+    ignores: ['**/node_modules/**', '**/dist/**', '**/.next/**', 'src/components/ui/**'],
     plugins: {
       import: importPlugin,
     },
