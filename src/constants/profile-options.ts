@@ -102,7 +102,6 @@ export const LIFE_RHYTHMS: Option<LifeRhythm>[] = [
   { code: 'FLEXIBLE', label: '유동적' },
 ];
 
-
 export const MEAL_PREFERENCES: Option<MealPreference>[] = [
   { code: 'HOME', label: '집밥' },
   { code: 'OUT', label: '외식' },
@@ -134,3 +133,47 @@ export const FAMILY_DISTANCES: Option<FamilyDistance>[] = [
   { code: 'HOLIDAY', label: '명절 위주' },
   { code: 'MINIMAL', label: '최소한의 만남' },
 ];
+
+// 문항 3
+// 문항 3 – 관계·소통
+
+export type ConversationStyle = 'HONEST' | 'CONSIDERATE' | 'MINIMAL';
+
+export type ConflictResolution = 'IMMEDIATE' | 'DELAYED' | 'AVOIDANT';
+
+export type ContactFrequencyPreference = 'FREQUENT' | 'AS_NEEDED' | 'MINIMAL';
+
+export type AffectionExpression = 'VERBAL' | 'ACTION' | 'LOW_EXPRESSION';
+
+export type RelationshipIndependence = 'TOGETHER' | 'INDEPENDENT';
+
+export const CONVERSATION_STYLES: Option<ConversationStyle>[] = [
+  { code: 'HONEST', label: '솔직한 편' },
+  { code: 'CONSIDERATE', label: '배려형' },
+  { code: 'MINIMAL', label: '필요한 말만' },
+];
+
+export const CONFLICT_RESOLUTIONS: Option<ConflictResolution>[] = [
+  { code: 'IMMEDIATE', label: '즉시 해결' },
+  { code: 'DELAYED', label: '시간 둔 후 해결' },
+  { code: 'AVOIDANT', label: '피하는 편' },
+];
+
+export const CONTACT_FREQUENCY_PREFERENCES: Option<ContactFrequencyPreference>[] = [
+  { code: 'FREQUENT', label: '자주 연락' },
+  { code: 'AS_NEEDED', label: '필요할 때 연락' },
+  { code: 'MINIMAL', label: '최소한의 연락' },
+];
+
+export const AFFECTION_EXPRESSIONS: Option<AffectionExpression>[] = [
+  { code: 'VERBAL', label: '말로 표현' },
+  { code: 'ACTION', label: '행동으로 표현' },
+  { code: 'LOW_EXPRESSION', label: '낮은 표현' },
+];
+
+export const RELATIONSHIP_INDEPENDENCE: Option<RelationshipIndependence>[] = [
+  { code: 'TOGETHER', label: '함께하는 시간 중시' },
+  { code: 'INDEPENDENT', label: '개인 시간 중시' },
+];
+
+// 문항 4

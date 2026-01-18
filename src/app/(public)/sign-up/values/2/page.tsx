@@ -25,6 +25,8 @@ type LifestyleProfile = {
   familyDistance?: string;
 };
 
+const MAX_SELECTION = 4;
+
 export default function Home() {
   const [lifestyleProfileData, setLifestyleProfileData] = useState<LifestyleProfile>({
     lifeRhythm: '',
@@ -44,9 +46,6 @@ export default function Home() {
     setLifestyleProfileData((prev) => {
       const current = prev[key];
 
-      console.log(current);
-      console.log(selectedCount);
-
       // 이미 선택된 값 해제
       if (current === value) {
         return {
@@ -63,7 +62,7 @@ export default function Home() {
         };
       }
 
-      if (selectedCount === 8) return prev;
+      if (selectedCount === MAX_SELECTION) return prev;
 
       return {
         ...prev,
@@ -83,7 +82,7 @@ export default function Home() {
         };
       }
 
-      if (selectedCount === 8) return prev;
+      if (selectedCount === MAX_SELECTION) return prev;
 
       return {
         ...prev,
@@ -100,7 +99,7 @@ export default function Home() {
         <br />
         정확하지 않아도 괜찮고, 편하게 선택해 주세요.
         <p className="text-muted-foreground mt-2 flex justify-between text-xs">
-          <span>최대 8개까지 선택할 수 있습니다.</span>
+          <span>최대 {MAX_SELECTION}개까지 선택할 수 있습니다.</span>
           <span>(현재 {selectedCount}개)</span>
         </p>
       </div>
@@ -190,7 +189,7 @@ export default function Home() {
           </div>
         </div>
         <Separator className="my-1 h-0.5!" />
-        <div className="flex flex-col gap-2">
+        <div className="mb-20 flex flex-col gap-2">
           <p className="font-semibold">가족과의 관계는 보통 어떤 편인가요?</p>
           <div className="flex flex-wrap gap-2">
             {FAMILY_DISTANCES.map(({ code, label }) => (
@@ -207,7 +206,7 @@ export default function Home() {
         </div>
       </div>
       <KeyboardAwareButton>
-        <Link href="/sign-up/values/2">
+        <Link href="/sign-up/values/3">
           <Button className="w-full">다음</Button>
         </Link>
       </KeyboardAwareButton>
