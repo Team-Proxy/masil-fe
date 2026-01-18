@@ -177,3 +177,90 @@ export const RELATIONSHIP_INDEPENDENCE: Option<RelationshipIndependence>[] = [
 ];
 
 // 문항 4
+export type SportHobby =
+  | 'WALKING'
+  | 'HIKING'
+  | 'LIGHT_EXERCISE'
+  | 'GYM'
+  | 'YOGA_STRETCHING'
+  | 'SWIMMING'
+  | 'CYCLING'
+  | 'GOLF'
+  | 'FISHING';
+
+export type CultureHobby =
+  | 'MOVIE'
+  | 'DRAMA'
+  | 'THEATER'
+  | 'MUSICAL'
+  | 'EXHIBITION'
+  | 'PERFORMANCE'
+  | 'READING'
+  | 'NEWS';
+
+export type MusicTaste = 'BALLAD' | 'KPOP' | 'TROT' | 'MUSIC_7080' | 'FOLK' | 'CLASSICAL' | 'POP' | 'OST';
+
+export type DailyHobby =
+  | 'CAFE'
+  | 'RESTAURANT'
+  | 'COOKING'
+  | 'HOME_MEAL'
+  | 'GARDENING'
+  | 'PHOTOGRAPHY'
+  | 'TRAVEL_PLANNING';
+
+export type TravelHobby = 'DOMESTIC_TRAVEL' | 'OVERSEAS_TRAVEL' | 'DAY_TRIP' | 'HOT_SPRING' | 'FOOD_TRAVEL';
+
+export type HobbyCode = SportHobby | CultureHobby | MusicTaste | DailyHobby | TravelHobby;
+
+export const SPORTS: Option<SportHobby>[] = [
+  { code: 'WALKING', label: '걷기 / 산책' },
+  { code: 'HIKING', label: '등산' },
+  { code: 'LIGHT_EXERCISE', label: '가벼운 운동' },
+  { code: 'GYM', label: '헬스' },
+  { code: 'YOGA_STRETCHING', label: '요가 / 스트레칭' },
+  { code: 'SWIMMING', label: '수영' },
+  { code: 'CYCLING', label: '자전거' },
+  { code: 'GOLF', label: '골프' },
+  { code: 'FISHING', label: '낚시' },
+];
+
+export const CULTURES: Option<CultureHobby>[] = [
+  { code: 'MOVIE', label: '영화 보기' },
+  { code: 'DRAMA', label: '드라마 시청' },
+  { code: 'THEATER', label: '연극' },
+  { code: 'MUSICAL', label: '뮤지컬' },
+  { code: 'EXHIBITION', label: '전시 / 미술관' },
+  { code: 'PERFORMANCE', label: '공연 관람' },
+  { code: 'READING', label: '책 읽기' },
+  { code: 'NEWS', label: '신문 / 시사 읽기' },
+];
+
+export const MUSIC_TASTES: Option<MusicTaste>[] = [
+  { code: 'BALLAD', label: '발라드' },
+  { code: 'KPOP', label: '대중가요' },
+  { code: 'TROT', label: '트로트' },
+  { code: 'MUSIC_7080', label: '7080 음악' },
+  { code: 'FOLK', label: '포크 / 통기타' },
+  { code: 'CLASSICAL', label: '클래식' },
+  { code: 'POP', label: '팝송' },
+  { code: 'OST', label: 'OST' },
+];
+
+export const DAILY_HOBBIES: Option<DailyHobby>[] = [
+  { code: 'CAFE', label: '카페 가기' },
+  { code: 'RESTAURANT', label: '맛집 탐방' },
+  { code: 'COOKING', label: '요리' },
+  { code: 'HOME_MEAL', label: '집밥 해먹기' },
+  { code: 'GARDENING', label: '홈가드닝 / 화초 키우기' },
+  { code: 'PHOTOGRAPHY', label: '사진 찍기' },
+  { code: 'TRAVEL_PLANNING', label: '여행 계획 세우기' },
+];
+
+export const TRAVEL_HOBBIES: Option<TravelHobby>[] = [
+  { code: 'DOMESTIC_TRAVEL', label: '국내 여행' },
+  { code: 'OVERSEAS_TRAVEL', label: '해외 여행' },
+  { code: 'DAY_TRIP', label: '당일치기 나들이' },
+  { code: 'HOT_SPRING', label: '온천 / 휴양' },
+  { code: 'FOOD_TRAVEL', label: '맛집 여행' },
+];

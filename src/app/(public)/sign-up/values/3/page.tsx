@@ -156,8 +156,6 @@ export default function Home() {
             <p className="font-semibold">마음을 표현하는 방식은 어떤 편인가요?</p>
             <p className="text-muted-foreground text-xs">여러 개 선택 가능합니다.</p>
           </div>
-          {/* <p className="font-semibold">마음을 표현하는 방식은 어떤 편인가요?</p> */}
-
           <div className="flex flex-wrap gap-2">
             {AFFECTION_EXPRESSIONS.map(({ code, label }) => (
               <Badge
