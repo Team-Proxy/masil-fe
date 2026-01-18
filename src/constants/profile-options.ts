@@ -135,8 +135,6 @@ export const FAMILY_DISTANCES: Option<FamilyDistance>[] = [
 ];
 
 // 문항 3
-// 문항 3 – 관계·소통
-
 export type ConversationStyle = 'HONEST' | 'CONSIDERATE' | 'MINIMAL';
 
 export type ConflictResolution = 'IMMEDIATE' | 'DELAYED' | 'AVOIDANT';
