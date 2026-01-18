@@ -13,7 +13,6 @@ const PREV_STEP: Record<string, string> = {
   '/sign-up/values/2': '/sign-up/values/1',
   '/sign-up/values/3': '/sign-up/values/2',
   '/sign-up/values/4': '/sign-up/values/3',
-  '/sign-up/profile-image': '/sign-up/values',
 };
 
 export function PreviousButton() {
@@ -22,7 +21,13 @@ export function PreviousButton() {
 
   const handlePrevious = () => {
     const prevPath = PREV_STEP[pathname];
-    router.push(prevPath);
+
+    if (prevPath) {
+      router.push(prevPath);
+      return;
+    }
+
+    router.back();
   };
 
   return (
