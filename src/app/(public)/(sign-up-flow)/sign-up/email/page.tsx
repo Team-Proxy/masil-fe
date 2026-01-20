@@ -47,7 +47,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <KeyboardAwareButton>
         <Link href="/sign-up/birth">
           <Button className="w-full">다음</Button>
