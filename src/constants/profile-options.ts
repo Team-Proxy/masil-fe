@@ -146,7 +146,7 @@ export type AffectionExpression = 'VERBAL' | 'ACTION' | 'LOW_EXPRESSION';
 export type RelationshipIndependence = 'TOGETHER' | 'INDEPENDENT';
 
 export const CONVERSATION_STYLES: Option<ConversationStyle>[] = [
-  { code: 'HONEST', label: '솔직한한' },
+  { code: 'HONEST', label: '솔직한' },
   { code: 'CONSIDERATE', label: '배려하는' },
   { code: 'CHEERFUL', label: '쾌활한' },
 ];
