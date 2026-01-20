@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: '마실',
-  description: '40·50·60대를 위한 맞춤 인영 매칭 플랫폼',
+  description: '40·50·60대를 위한 맞춤 인연 매칭 플랫폼',
 };
 
 export default function RootLayout({
