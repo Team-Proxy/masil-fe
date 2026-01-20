@@ -24,22 +24,22 @@ export default function Home() {
           variant="outline"
           className={cn(
             'border-muted ring-border w-full ring-1',
-            maritalStatus === 'married' && 'border-primary text-primary ring-primary',
+            maritalStatus === 'single' && 'border-primary text-primary ring-primary',
           )}
-          onClick={() => setMaritalStatus('married')}
+          onClick={() => setMaritalStatus('single')}
         >
-          돌싱
+          싱글
         </Button>
         <Button
           type="button"
           variant="outline"
           className={cn(
             'border-muted ring-border w-full ring-1',
-            maritalStatus === 'single' && 'border-primary text-primary ring-primary',
+            maritalStatus === 'married' && 'border-primary text-primary ring-primary',
           )}
-          onClick={() => setMaritalStatus('single')}
+          onClick={() => setMaritalStatus('married')}
         >
-          싱글
+          돌싱
         </Button>
       </div>
       <KeyboardAwareButton>

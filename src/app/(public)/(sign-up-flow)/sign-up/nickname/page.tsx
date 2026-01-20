@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 export default function Home() {
   return (
     <div>
-      <h1 className="pb-6">넥네임을 설정해 주세요.</h1>
+      <h1 className="pb-6">닉네임을 설정해 주세요.</h1>
       <p className="text-muted-foreground pb-4 text-sm">
         프로필에 표시되는 닉네임입니다.
         <br />

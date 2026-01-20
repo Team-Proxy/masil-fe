@@ -25,7 +25,7 @@ type LifestyleProfile = {
   familyDistance?: string;
 };
 
-const MAX_SELECTION = 4;
+const MAX_SELECTION = 6;
 
 export default function Home() {
   const [lifestyleProfileData, setLifestyleProfileData] = useState<LifestyleProfile>({
