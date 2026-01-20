@@ -86,7 +86,7 @@ export const POLITICS: Option<Politics>[] = [
 // 문항 2
 export type LifeRhythm = 'MORNING' | 'NIGHT' | 'FLEXIBLE';
 
-export type MealPreference = 'HOME' | 'OUT' | 'BOTH';
+export type MealPreference = 'HOME' | 'DELIVERY' | 'OUT';
 
 export type SpendingStyle = 'SAVING' | 'PLANNED' | 'SPENDING';
 
@@ -104,8 +104,8 @@ export const LIFE_RHYTHMS: Option<LifeRhythm>[] = [
 
 export const MEAL_PREFERENCES: Option<MealPreference>[] = [
   { code: 'HOME', label: '집밥' },
+  { code: 'DELIVERY', label: '배달' },
   { code: 'OUT', label: '외식' },
-  { code: 'BOTH', label: '둘 다' },
 ];
 
 export const SPENDING_STYLES: Option<SpendingStyle>[] = [
@@ -135,7 +135,7 @@ export const FAMILY_DISTANCES: Option<FamilyDistance>[] = [
 ];
 
 // 문항 3
-export type ConversationStyle = 'HONEST' | 'CONSIDERATE' | 'MINIMAL';
+export type ConversationStyle = 'HONEST' | 'CONSIDERATE' | 'CHEERFUL';
 
 export type ConflictResolution = 'IMMEDIATE' | 'DELAYED' | 'AVOIDANT';
 
@@ -146,9 +146,9 @@ export type AffectionExpression = 'VERBAL' | 'ACTION' | 'LOW_EXPRESSION';
 export type RelationshipIndependence = 'TOGETHER' | 'INDEPENDENT';
 
 export const CONVERSATION_STYLES: Option<ConversationStyle>[] = [
-  { code: 'HONEST', label: '솔직한 편' },
-  { code: 'CONSIDERATE', label: '배려형' },
-  { code: 'MINIMAL', label: '필요한 말만' },
+  { code: 'HONEST', label: '솔직한한' },
+  { code: 'CONSIDERATE', label: '배려하는' },
+  { code: 'CHEERFUL', label: '쾌활한' },
 ];
 
 export const CONFLICT_RESOLUTIONS: Option<ConflictResolution>[] = [
@@ -166,7 +166,7 @@ export const CONTACT_FREQUENCY_PREFERENCES: Option<ContactFrequencyPreference>[]
 export const AFFECTION_EXPRESSIONS: Option<AffectionExpression>[] = [
   { code: 'VERBAL', label: '말로 표현' },
   { code: 'ACTION', label: '행동으로 표현' },
-  { code: 'LOW_EXPRESSION', label: '낮은 표현' },
+  { code: 'LOW_EXPRESSION', label: '적은 표현' },
 ];
 
 export const RELATIONSHIP_INDEPENDENCE: Option<RelationshipIndependence>[] = [
@@ -176,8 +176,10 @@ export const RELATIONSHIP_INDEPENDENCE: Option<RelationshipIndependence>[] = [
 
 // 문항 4
 export type SportHobby =
+  | 'RUNNING'
   | 'WALKING'
   | 'HIKING'
+  | 'SOCCER'
   | 'LIGHT_EXERCISE'
   | 'GYM'
   | 'YOGA_STRETCHING'
@@ -194,18 +196,22 @@ export type CultureHobby =
   | 'EXHIBITION'
   | 'PERFORMANCE'
   | 'READING'
-  | 'NEWS';
+  | 'NEWS_READING'
+  | 'NEWS_WATCHING';
 
-export type MusicTaste = 'BALLAD' | 'KPOP' | 'TROT' | 'MUSIC_7080' | 'FOLK' | 'CLASSICAL' | 'POP' | 'OST';
+export type MusicTaste =
+  | 'BALLAD'
+  | 'KPOP'
+  | 'TROT'
+  | 'MUSIC_7080'
+  | 'MUSIC_90'
+  | 'FOLK'
+  | 'CLASSICAL'
+  | 'NEW_AGE'
+  | 'POP'
+  | 'OST';
 
-export type DailyHobby =
-  | 'CAFE'
-  | 'RESTAURANT'
-  | 'COOKING'
-  | 'HOME_MEAL'
-  | 'GARDENING'
-  | 'PHOTOGRAPHY'
-  | 'TRAVEL_PLANNING';
+export type DailyHobby = 'CAFE' | 'RESTAURANT' | 'COOKING' | 'GARDENING' | 'PHOTOGRAPHY' | 'SOCIALIZING';
 
 export type TravelHobby = 'DOMESTIC_TRAVEL' | 'OVERSEAS_TRAVEL' | 'DAY_TRIP' | 'HOT_SPRING' | 'FOOD_TRAVEL';
 
@@ -213,7 +219,9 @@ export type HobbyCode = SportHobby | CultureHobby | MusicTaste | DailyHobby | Tr
 
 export const SPORTS: Option<SportHobby>[] = [
   { code: 'WALKING', label: '걷기 / 산책' },
+  { code: 'RUNNING', label: '달리기' },
   { code: 'HIKING', label: '등산' },
+  { code: 'SOCCER', label: '축구' },
   { code: 'LIGHT_EXERCISE', label: '가벼운 운동' },
   { code: 'GYM', label: '헬스' },
   { code: 'YOGA_STRETCHING', label: '요가 / 스트레칭' },
@@ -230,17 +238,20 @@ export const CULTURES: Option<CultureHobby>[] = [
   { code: 'MUSICAL', label: '뮤지컬' },
   { code: 'EXHIBITION', label: '전시 / 미술관' },
   { code: 'PERFORMANCE', label: '공연 관람' },
-  { code: 'READING', label: '책 읽기' },
-  { code: 'NEWS', label: '신문 / 시사 읽기' },
+  { code: 'READING', label: '독서' },
+  { code: 'NEWS_READING', label: '신문 / 시사 읽기' },
+  { code: 'NEWS_WATCHING', label: '뉴스 보기' },
 ];
 
 export const MUSIC_TASTES: Option<MusicTaste>[] = [
   { code: 'BALLAD', label: '발라드' },
-  { code: 'KPOP', label: '대중가요' },
+  { code: 'KPOP', label: 'KPOP' },
   { code: 'TROT', label: '트로트' },
-  { code: 'MUSIC_7080', label: '7080 음악' },
+  { code: 'MUSIC_7080', label: '7080년대 음악' },
+  { code: 'MUSIC_90', label: '90년대 음악' },
   { code: 'FOLK', label: '포크 / 통기타' },
   { code: 'CLASSICAL', label: '클래식' },
+  { code: 'NEW_AGE', label: '뉴에이지' },
   { code: 'POP', label: '팝송' },
   { code: 'OST', label: 'OST' },
 ];
@@ -249,10 +260,9 @@ export const DAILY_HOBBIES: Option<DailyHobby>[] = [
   { code: 'CAFE', label: '카페 가기' },
   { code: 'RESTAURANT', label: '맛집 탐방' },
   { code: 'COOKING', label: '요리' },
-  { code: 'HOME_MEAL', label: '집밥 해먹기' },
-  { code: 'GARDENING', label: '홈가드닝 / 화초 키우기' },
+  { code: 'GARDENING', label: '조경' },
   { code: 'PHOTOGRAPHY', label: '사진 찍기' },
-  { code: 'TRAVEL_PLANNING', label: '여행 계획 세우기' },
+  { code: 'SOCIALIZING', label: '모임·친목' },
 ];
 
 export const TRAVEL_HOBBIES: Option<TravelHobby>[] = [

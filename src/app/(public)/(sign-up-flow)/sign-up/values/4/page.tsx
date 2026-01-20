@@ -25,34 +25,6 @@ export default function Home() {
     return count + (Array.isArray(value) ? value.length : 1);
   }, 0);
 
-  // const toggleSelection = (key: keyof HobbyProfile, value: string) => {
-  //   setHobbyProfileData((prev) => {
-  //     const current = prev[key];
-
-  //     // 이미 선택된 값 해제
-  //     if (current === value) {
-  //       return {
-  //         ...prev,
-  //         [key]: '',
-  //       };
-  //     }
-
-  //     // 다른 값으로 교체
-  //     if (current) {
-  //       return {
-  //         ...prev,
-  //         [key]: value,
-  //       };
-  //     }
-
-  //     if (selectedCount === MAX_SELECTION) return prev;
-
-  //     return {
-  //       ...prev,
-  //       [key]: value,
-  //     };
-  //   });
-  // };
 
   const toggleMultiSelection = (code: HobbyCode) => {
     setHobbyProfileData((prev) => {

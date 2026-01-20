@@ -19,7 +19,7 @@ type RelationshipProfile = {
   conversationStyle?: string;
   conflictResolution?: string;
   contactFrequencyPreference?: string;
-  affectionExpression?: string[];
+  affectionExpression?: string;
   relationshipIndependence?: string;
 };
 
@@ -30,7 +30,7 @@ export default function Home() {
     conversationStyle: '',
     conflictResolution: '',
     contactFrequencyPreference: '',
-    affectionExpression: [],
+    affectionExpression: '',
     relationshipIndependence: '',
   });
 
@@ -64,26 +64,6 @@ export default function Home() {
       return {
         ...prev,
         [key]: value,
-      };
-    });
-  };
-
-  const toggleAffectionExpressionSelection = (value: string) => {
-    setRelationshipProfileData((prev) => {
-      const current = prev.affectionExpression ?? [];
-
-      if (current.includes(value)) {
-        return {
-          ...prev,
-          affectionExpression: current.filter((item) => item !== value),
-        };
-      }
-
-      if (selectedCount === MAX_SELECTION) return prev;
-
-      return {
-        ...prev,
-        affectionExpression: [...current, value],
       };
     });
   };
@@ -152,17 +132,14 @@ export default function Home() {
         </div>
         <Separator className="my-1 h-0.5!" />
         <div className="flex flex-col gap-2">
-          <div className="flex flex-col gap-1">
-            <p className="font-semibold">마음을 표현하는 방식은 어떤 편인가요?</p>
-            <p className="text-muted-foreground text-xs">여러 개 선택 가능합니다.</p>
-          </div>
+          <p className="font-semibold">마음을 표현하는 방식은 어떤 편인가요?</p>
           <div className="flex flex-wrap gap-2">
             {AFFECTION_EXPRESSIONS.map(({ code, label }) => (
               <Badge
                 key={code}
-                variant={relationshipProfileData.affectionExpression?.includes(code) ? 'secondary' : 'outline'}
+                variant={relationshipProfileData.affectionExpression === code ? 'secondary' : 'outline'}
                 className="cursor-pointer px-2 text-base"
-                onClick={() => toggleAffectionExpressionSelection(code)}
+                onClick={() => toggleSelection('affectionExpression', code)}
               >
                 {label}
               </Badge>
@@ -170,7 +147,7 @@ export default function Home() {
           </div>
         </div>
         <Separator className="my-1 h-0.5!" />
-        <div className="flex flex-col gap-2">
+        <div className="mb-20 flex flex-col gap-2">
           <p className="font-semibold">관계에서 개인 시간은 얼마나 중요하신가요?</p>
           <div className="flex flex-wrap gap-2">
             {RELATIONSHIP_INDEPENDENCE.map(({ code, label }) => (

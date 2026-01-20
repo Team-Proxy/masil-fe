@@ -30,7 +30,7 @@ export default function Home() {
           <div className="flex justify-between">
             <span className="text-destructive text-sm">2:59</span>
             <button type="button" className="text-xs underline underline-offset-2">
-              인증버호 재전송
+              인증번호 재전송
             </button>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
       <KeyboardAwareButton>
-        <Link href="/sign-up/birth">
+        <Link href="/sign-up/nickname">
           <Button className="w-full">다음</Button>
         </Link>
       </KeyboardAwareButton>
