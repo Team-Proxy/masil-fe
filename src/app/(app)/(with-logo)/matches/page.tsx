@@ -8,8 +8,6 @@ import { Card, CardContent } from '@/components/ui/card';
 export default function Page() {
   const isLoading = false;
 
-  // Simulate loading state
-
   return (
     <div className="flex h-full flex-col gap-2">
       <div className="flex justify-end">
