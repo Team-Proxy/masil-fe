@@ -1,10 +1,12 @@
-// import BottomTabBar from '@/components/BottomTabBar';
+import BottomNavBar from '@/components/BottomNavBar/BottomNavBar';
+import TopNavBar from '@/components/TopNavBar/TopNavBar';
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <main>{children}</main>
-      {/* <BottomTabBar /> */}
+    <div className="flex h-dvh flex-col">
+      <TopNavBar />
+      <main className="flex-1 overflow-y-auto">{children}</main>
+      <BottomNavBar />
     </div>
   );
 }
