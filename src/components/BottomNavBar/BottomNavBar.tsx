@@ -12,7 +12,7 @@ export default function BottomNavBar() {
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 
   return (
-    <nav className="bg-background mx-auto w-full max-w-105 p-4" aria-label="앱 하단 네비게이션">
+    <nav className="bg-primary-foreground mx-auto w-full max-w-105 border-t p-4" aria-label="앱 하단 네비게이션">
       <ul className="flex justify-around text-[10px]">
         {TABS.map((tab) => (
           <li key={tab.name}>

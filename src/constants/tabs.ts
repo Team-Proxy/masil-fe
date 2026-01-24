@@ -22,13 +22,13 @@ export const TABS: Tab[] = [
     size: 20,
   },
   {
-    name: '매칭',
+    name: '인연 찾기',
     href: '/matches',
     icon: BowArrowIcon,
     size: 20,
   },
   {
-    name: '매칭 현황',
+    name: '인연 현황',
     href: '/match-requests',
     icon: HeartHandshakeIcon,
     size: 20,

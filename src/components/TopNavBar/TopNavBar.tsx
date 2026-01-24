@@ -6,9 +6,8 @@ export default function TopNavBar() {
     <header>
       <nav aria-label="앱 상단 네비게이션" className="flex items-center justify-between p-4">
         <div>
-          <Link href="/matches" aria-label="홈으로 이동" className="flex items-center gap-2">
-            <span>마실 로고</span>
-            <span>마실</span>
+          <Link href="/matches" aria-label="홈으로 이동">
+            마실 로고
           </Link>
         </div>
         <ul className="flex items-center gap-2">
