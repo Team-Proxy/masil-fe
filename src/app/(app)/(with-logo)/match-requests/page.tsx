@@ -1,3 +1,5 @@
+import ReceivedData from '@/app/(app)/(with-logo)/match-requests/ReceivedData';
+import SentData from '@/app/(app)/(with-logo)/match-requests/SentData';
 import TabsLayout from '@/components/TabsLayout/TabsLayout';
 
 export default function Page() {
@@ -15,12 +17,26 @@ export default function Page() {
             value: 'received',
             label: '도착한 인연',
             badgeCount: 30,
-            content: <div>몇 명 있음</div>,
+            content: (
+              <div className="divide-y">
+                <ReceivedData />
+                <ReceivedData />
+                <ReceivedData />
+                <ReceivedData />
+              </div>
+            ),
           },
           {
             value: 'sent',
             label: '요청한 인연',
-            content: <div>몇 명 있음22</div>,
+            content: (
+              <div className="divide-y">
+                <SentData />
+                <SentData />
+                <SentData />
+                <SentData />
+              </div>
+            ),
           },
         ]}
       />

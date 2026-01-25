@@ -13,7 +13,7 @@ export default function Page() {
           <Label htmlFor="email">이메일</Label>
           <div className="flex gap-2">
             <Input id="email" type="email" placeholder="이메일을 입력하세요" className="flex-1" />
-            <Button type="button" size="sm" className="h-9 w-25">
+            <Button type="button" className="w-25">
               인증번호 발송
             </Button>
           </div>
@@ -23,9 +23,7 @@ export default function Page() {
           <Label htmlFor="code">인증번호</Label>
           <div className="flex items-center gap-2">
             <Input id="code" placeholder="인증번호 6자리" className="flex-1" />
-            <Button size="sm" className="h-9 w-25">
-              확인
-            </Button>
+            <Button className="w-25">확인</Button>
           </div>
           <div className="flex justify-between">
             <span className="text-destructive text-sm">2:59</span>
