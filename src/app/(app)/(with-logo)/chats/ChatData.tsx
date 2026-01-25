@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Badge } from '@/components/ui/badge';
 
 export default function ChatData() {
   return (
     <div className="py-4">
-      <div className="flex gap-2">
+      <Link href="/chats/1" className="flex gap-2">
         <div className="relative h-15 w-15 shrink-0 overflow-hidden rounded-full">
           <Image src="/images/profile-image.jpeg" alt="Profile" fill className="block object-cover" />
         </div>
@@ -24,7 +25,7 @@ export default function ChatData() {
             <Badge className="h-3 min-w-4 px-1 text-[10px]">3</Badge>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
