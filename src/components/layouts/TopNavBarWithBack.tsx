@@ -11,7 +11,7 @@ export default function TopNavBarWithBack({ title }: TopNavBarWithBackProps) {
   const router = useRouter();
 
   return (
-    <header className="bg-background sticky top-0">
+    <header className="bg-background sticky top-0 z-1">
       <div className="border-b">
         <nav className="flex items-center gap-2 px-4 py-4">
           <button type="button" onClick={() => router.back()} aria-label="뒤로가기">

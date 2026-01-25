@@ -13,7 +13,7 @@ export default function TopNavBarWithLogo() {
   if (!isTopNavBarVisible) return null;
 
   return (
-    <header className="bg-background sticky top-0">
+    <header className="bg-background sticky top-0 z-1">
       <div className="border-b">
         <nav aria-label="앱 상단 네비게이션" className="flex items-center justify-between p-4">
           <div>

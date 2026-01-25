@@ -37,29 +37,26 @@ export default function Page() {
           <li>
             <Button
               variant="outline"
-              className="h-13.75 w-13.75 flex-col gap-1 rounded-full border-red-100 bg-red-50 text-[10px] hover:bg-red-100/90"
+              className="border-error bg-error-muted hover:bg-error-muted/90 h-13.75 w-13.75 flex-col gap-1 rounded-full text-[10px]"
               disabled={isLoading}
             >
-              <XIcon className="h-5 w-5 text-red-500" />
+              <XIcon className="text-error h-5 w-5" />
               인연 제외
             </Button>
           </li>
           <li>
-            <Button
-              className="bg-primary text-primary-foreground hover:bg-primary/90 h-17.5 w-17.5 flex-col gap-1 rounded-full"
-              disabled={isLoading}
-            >
-              <SearchIcon className="h-7 w-7" />
+            <Button className="flex h-17.5 w-17.5 flex-col gap-1 rounded-full" disabled={isLoading}>
+              <SearchIcon className="h-5! w-5!" />
               <span className="text-sm font-semibold">인연 찾기</span>
             </Button>
           </li>
           <li>
             <Button
               variant="outline"
-              className="h-13.75 w-13.75 flex-col gap-1 rounded-full border-emerald-100 bg-emerald-50 text-[10px] hover:bg-emerald-100/90"
+              className="border-success bg-success-muted hover:bg-success-muted/90 h-13.75 w-13.75 flex-col gap-1 rounded-full text-[10px]"
               disabled={isLoading}
             >
-              <CheckIcon className="h-5 w-5 text-emerald-500" />
+              <CheckIcon className="text-success h-5 w-5" />
               인연 요청
             </Button>
           </li>
