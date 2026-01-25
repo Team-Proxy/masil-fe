@@ -36,14 +36,14 @@ export default function TabsLayout({ tabs, defaultValue }: TabsLayoutProps) {
 
   return (
     <Tabs defaultValue={activeTab} className="flex gap-0" onValueChange={handleTabChange}>
-      <TabsList variant="line" className="w-full gap-0 border-b">
+      <TabsList variant="line" className="bg-background sticky top-14 z-1 w-full gap-0 border-b py-3">
         {tabs.map((tab, index) => {
           const { value, label, badgeCount } = tab;
           return (
             <TabsTrigger
               key={index}
               value={value}
-              className="data-[state=active]:text-primary ::after:absolute after:bg-primary relative rounded-none border-0 text-sm font-medium after:right-0 after:bottom-0"
+              className="data-[state=active]:text-primary ::after:absolute after:bg-primary relative rounded-none border-0 py-3.5 text-sm font-medium after:right-0 after:bottom-0"
             >
               <span>{label}</span>
               {badgeCount ? <Badge className="h-4 w-6">{badgeCount}</Badge> : null}

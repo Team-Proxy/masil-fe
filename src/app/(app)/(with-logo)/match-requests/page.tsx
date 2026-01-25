@@ -9,7 +9,6 @@ export default function Page() {
         <h1 className="pb-2 text-lg font-semibold">나의 인연 현황</h1>
         <p className="text-muted-foreground pb-4 text-sm">도착한 인연과 내가 보낸 인연 요청을 확인할 수 있습니다.</p>
       </section>
-
       <TabsLayout
         defaultValue="received"
         tabs={[
@@ -18,7 +17,7 @@ export default function Page() {
             label: '도착한 인연',
             badgeCount: 30,
             content: (
-              <div className="divide-y">
+              <div className="divide-muted-foreground/10 divide-y">
                 <ReceivedData />
                 <ReceivedData />
                 <ReceivedData />
@@ -30,7 +29,7 @@ export default function Page() {
             value: 'sent',
             label: '요청한 인연',
             content: (
-              <div className="divide-y">
+              <div className="divide-muted-foreground/10 divide-y">
                 <SentData />
                 <SentData />
                 <SentData />

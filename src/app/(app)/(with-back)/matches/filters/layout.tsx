@@ -4,7 +4,7 @@ export default function MatchFiltersLayout({ children }: { children: React.React
   return (
     <>
       <TopNavBarWithBack title="인연 찾기 설정" />
-      <section className="flex-1 p-4">{children}</section>
+      <section className="flex-1 px-4 pb-4">{children}</section>
     </>
   );
 }

@@ -6,7 +6,7 @@ export default function WithLogoLayout({ children }: { children: React.ReactNode
     <div className="flex h-dvh flex-col">
       <main className="flex flex-1 flex-col overflow-y-auto">
         <TopNavBarWithLogo />
-        <section className="flex-1 py-4">{children}</section>
+        <section className="flex-1 pb-4">{children}</section>
       </main>
       <BottomNavBar />
     </div>
