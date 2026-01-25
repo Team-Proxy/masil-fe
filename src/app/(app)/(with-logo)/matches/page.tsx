@@ -9,7 +9,7 @@ export default function Page() {
   const isLoading = false;
 
   return (
-    <div className="flex h-full flex-col gap-2">
+    <div className="flex h-full flex-col gap-2 px-4">
       <div className="flex justify-end">
         <Link href="/matches/filters">
           <Settings2Icon size={20} />
