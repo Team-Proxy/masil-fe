@@ -1,9 +1,8 @@
 import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 
-export default function ReceivedData() {
+export default function ChatData() {
   return (
     <div className="py-4">
       <div className="flex gap-2">
@@ -17,21 +16,14 @@ export default function ReceivedData() {
               <span>닉네임</span>
               <span className="text-muted-foreground">(24)</span>
             </div>
-            <div className="text-muted-foreground text-sm font-medium">• 2시간 전</div>
+            <div className="text-muted-foreground text-sm font-semibold">안녕하세요! 만나서 반가워요.</div>
           </div>
 
-          <div className="flex flex-col items-end gap-2">
-            <Badge className="bg-info-muted text-info-foreground border-info/30 border font-semibold">답변 대기</Badge>
+          <div className="flex flex-col items-end gap-5">
+            <div className="text-muted-foreground text-xs">오후 2:32</div>
+            <Badge className="h-3 min-w-4 px-1 text-[10px]">3</Badge>
           </div>
         </div>
-      </div>
-      <div className="grid grid-cols-2 gap-2 pt-4">
-        <Button type="button" size="sm">
-          수락
-        </Button>
-        <Button type="button" variant="outline" size="sm">
-          거절
-        </Button>
       </div>
     </div>
   );
