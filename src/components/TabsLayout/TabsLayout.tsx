@@ -36,7 +36,7 @@ export default function TabsLayout({ tabs, defaultValue }: TabsLayoutProps) {
 
   return (
     <Tabs defaultValue={activeTab} className="flex gap-0" onValueChange={handleTabChange}>
-      <TabsList variant="line" className="bg-background sticky top-14 z-1 w-full gap-0 border-b py-3">
+      <TabsList variant="line" className="bg-background sticky top-0 z-1 w-full gap-0 border-b py-3">
         {tabs.map((tab, index) => {
           const { value, label, badgeCount } = tab;
           return (
