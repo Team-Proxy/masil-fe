@@ -1,4 +1,4 @@
-import { CheckIcon, SearchIcon, Settings2Icon, XIcon } from 'lucide-react';
+import { CheckIcon, EyeOffIcon, SearchIcon, Settings2Icon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -24,8 +24,8 @@ export default function Page() {
               <Image src="/images/profile-image.jpeg" alt="Profile" fill className="object-cover" />
               <div className="absolute inset-x-0 bottom-0 h-50 bg-linear-to-t from-black/80 to-transparent" />
               <div className="absolute bottom-25 left-4 text-white">
-                <div className="flex items-center gap-2">
-                  <span className="text-[43px] leading-none font-bold tracking-tighter">닉네임</span>{' '}
+                <div className="flex items-end gap-2">
+                  <span className="text-[43px] font-bold tracking-tighter">닉네임</span>
                   <span className="text-[38px] font-semibold text-white/80">48</span>
                 </div>
               </div>
@@ -37,11 +37,11 @@ export default function Page() {
           <li>
             <Button
               variant="outline"
-              className="border-error bg-error-muted hover:bg-error-muted/90 h-13.75 w-13.75 flex-col gap-1 rounded-full text-[10px]"
+              className="h-13.75 w-13.75 flex-col gap-1 rounded-full border-gray-300 bg-gray-50 text-[10px] text-gray-600 hover:bg-gray-100"
               disabled={isLoading}
             >
-              <XIcon className="text-error h-5 w-5" />
-              인연 제외
+              <EyeOffIcon className="h-5 w-5 text-gray-500" />
+              인연 숨김
             </Button>
           </li>
           <li>
