@@ -5,7 +5,10 @@ export default function WithLogoLayout({ children }: { children: React.ReactNode
   return (
     <div className="flex h-dvh flex-col">
       <TopNavBarWithLogo />
-      <main className="flex flex-1 flex-col overflow-y-auto">{children}</main>
+      <main id="scroll-container" className="flex flex-1 flex-col overflow-y-auto">
+        <div id="scroll-sentinel" aria-hidden className="h-px" />
+        {children}
+      </main>
       <BottomNavBar />
     </div>
   );
