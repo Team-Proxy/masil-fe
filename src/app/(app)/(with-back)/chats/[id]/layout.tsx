@@ -10,7 +10,7 @@ export default async function ChatLayout({ children, params }: ChatLayoutProps) 
   return (
     <>
       <TopNavBarWithBack title={id} />
-      <section className="flex-1 px-4 pb-4">{children}</section>
+      <section className="flex-1">{children}</section>
     </>
   );
 }
