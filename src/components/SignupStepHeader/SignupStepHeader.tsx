@@ -6,18 +6,18 @@ import { PreviousButton } from '@/components/SignupStepHeader/PreviousButton';
 import { Progress } from '@/components/ui/progress';
 
 const STEP_MAP: Record<string, number> = {
-  '/sign-up/email': 1,
-  '/sign-up/nickname': 2,
-  '/sign-up/birth': 3,
-  '/sign-up/gender': 4,
-  '/sign-up/marital-status': 5,
-  '/sign-up/marital-status/children': 5,
-  '/sign-up/distance': 6,
-  '/sign-up/values/1': 7,
-  '/sign-up/values/2': 7,
-  '/sign-up/values/3': 7,
-  '/sign-up/values/4': 7,
-  '/sign-up/profile-image': 8,
+  '/signup/email': 1,
+  '/signup/nickname': 2,
+  '/signup/birth': 3,
+  '/signup/gender': 4,
+  '/signup/marital-status': 5,
+  '/signup/marital-status/children': 5,
+  '/signup/distance': 6,
+  '/signup/values/1': 7,
+  '/signup/values/2': 7,
+  '/signup/values/3': 7,
+  '/signup/values/4': 7,
+  '/signup/profile-image': 8,
 };
 
 export function SignupStepHeader() {

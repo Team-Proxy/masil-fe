@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Button } from '@/components/ui/button';
 
-export default function Home() {
+export default function Page() {
   return (
     <div className="flex min-h-dvh flex-col px-6">
       <div className="flex flex-col items-center gap-4 pt-28">
@@ -24,7 +24,7 @@ export default function Home() {
         </Button>
 
         <Button asChild variant="outline" className="h-12 w-full rounded-3xl">
-          <Link href="/sign-up/email">
+          <Link href="/signup/email">
             <MailIcon className="text-muted-foreground h-4 w-4" />
             이메일로 계속하기
           </Link>
