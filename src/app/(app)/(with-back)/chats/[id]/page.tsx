@@ -3,19 +3,16 @@ import { getMessageFlags } from '@/utils/chatGrouping';
 
 import ChatBubble from './ChatBubble';
 
-interface PageProps {
-  params: Promise<{ id: string }>;
-}
+// interface PageProps {
+//   params: Promise<{ id: string }>;
+// }
 
 const ME_ID = 1;
 
-export default async function Page({ params }: PageProps) {
-  const { id } = await params;
-
+export default async function Page() {
   return (
-    <div className="bg-primary-foreground flex h-dvh flex-col">
-      <span>ChatRoom: {id}</span>
-      <div className="flex-1 space-y-4 overflow-y-auto px-4 py-6">
+    <div className="bg-primary-foreground flex min-h-0 flex-1 flex-col">
+      <div className="flex-1 space-y-2 overflow-y-auto px-4 py-2">
         {MOCK_MESSAGES.map((msg, index) => {
           const { showTail, showTime } = getMessageFlags(MOCK_MESSAGES, index);
 

@@ -5,14 +5,12 @@ import { useRouter } from 'next/navigation';
 
 import useInView from '@/hooks/useInView';
 import { cn } from '@/libs/utils';
+import { useHeaderTitle } from '@/providers/headerTitleProvider';
 
-interface TopNavBarWithBackProps {
-  title: string;
-}
-
-export default function TopNavBarWithBack({ title }: TopNavBarWithBackProps) {
+export default function TopNavBarWithBack() {
   const router = useRouter();
   const { ref, isInView } = useInView<HTMLDivElement>();
+  const title = useHeaderTitle();
 
   return (
     <>
