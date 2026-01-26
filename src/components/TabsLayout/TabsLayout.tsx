@@ -52,7 +52,7 @@ export default function TabsLayout({ tabs, defaultValue }: TabsLayoutProps) {
         })}
       </TabsList>
       {tabs.map((tab, index) => (
-        <TabsContent key={index} value={tab.value} className="p-4">
+        <TabsContent key={index} value={tab.value} className="px-4">
           {tab.content}
         </TabsContent>
       ))}

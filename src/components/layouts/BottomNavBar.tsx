@@ -9,7 +9,10 @@ import { cn } from '@/libs/utils';
 
 export default function BottomNavBar() {
   const pathname = usePathname();
+  const hideBottomNavBar = pathname.startsWith('/chats/');
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
+
+  if (hideBottomNavBar) return null;
 
   return (
     <nav className="bg-primary-foreground mx-auto w-full max-w-105 border-t p-4" aria-label="앱 하단 네비게이션">
