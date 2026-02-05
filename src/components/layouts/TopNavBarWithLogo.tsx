@@ -2,23 +2,16 @@
 
 import { BellIcon, SettingsIcon } from 'lucide-react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 import useInView from '@/hooks/useInView';
 import { cn } from '@/libs/utils';
 
-const NAV_LINKS = ['/communities', '/matches', '/match-requests', '/chats', '/mypage'];
-
 export default function TopNavBarWithLogo() {
-  const currentPath = usePathname();
-  const isTopNavBarVisible = NAV_LINKS.includes(currentPath);
   const { isInView } = useInView({
     initialInView: true,
     rootId: 'scroll-container',
     targetId: 'scroll-sentinel',
   });
-
-  if (!isTopNavBarVisible) return null;
 
   return (
     <header className={cn('bg-background sticky top-0 z-1', !isInView && 'border-b')}>

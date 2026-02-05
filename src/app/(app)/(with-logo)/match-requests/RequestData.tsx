@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { Badge } from '@/components/ui/badge';
 
-export default function SentData() {
+export default function RequestData() {
   return (
     <div className="py-4">
       <div className="flex gap-2">

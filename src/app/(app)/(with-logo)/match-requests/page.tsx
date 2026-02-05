@@ -1,6 +1,7 @@
 import ReceivedData from '@/app/(app)/(with-logo)/match-requests/ReceivedData';
-import SentData from '@/app/(app)/(with-logo)/match-requests/SentData';
+import RequestData from '@/app/(app)/(with-logo)/match-requests/RequestData';
 import TabsLayout from '@/components/TabsLayout/TabsLayout';
+
 
 export default function Page() {
   return (
@@ -26,14 +27,14 @@ export default function Page() {
             ),
           },
           {
-            value: 'sent',
+            value: 'request',
             label: '요청한 인연',
             content: (
               <div className="divide-muted-foreground/10 divide-y">
-                <SentData />
-                <SentData />
-                <SentData />
-                <SentData />
+                <RequestData />
+                <RequestData />
+                <RequestData />
+                <RequestData />
               </div>
             ),
           },
