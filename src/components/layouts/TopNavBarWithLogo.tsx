@@ -1,0 +1,39 @@
+'use client';
+
+import { BellIcon, SettingsIcon } from 'lucide-react';
+import Link from 'next/link';
+
+import useInView from '@/hooks/useInView';
+import { cn } from '@/libs/utils';
+
+export default function TopNavBarWithLogo() {
+  const { isInView } = useInView({
+    initialInView: true,
+    rootId: 'scroll-container',
+    targetId: 'scroll-sentinel',
+  });
+
+  return (
+    <header className={cn('bg-background sticky top-0 z-1', !isInView && 'border-b')}>
+      <nav aria-label="앱 상단 네비게이션" className="flex items-center justify-between p-4">
+        <div>
+          <Link href="/matches" aria-label="홈으로 이동">
+            마실 로고
+          </Link>
+        </div>
+        <ul className="flex items-center gap-2">
+          <li>
+            <Link href="/notifications" aria-label="알림">
+              <BellIcon size={20} />
+            </Link>
+          </li>
+          <li>
+            <Link href="/settings" aria-label="환경 설정">
+              <SettingsIcon size={20} />
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+}

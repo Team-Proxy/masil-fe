@@ -2,17 +2,17 @@ import { ChevronLeftIcon } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
 
 const PREV_STEP: Record<string, string> = {
-  '/sign-up/email': '/',
-  '/sign-up/nickname': '/sign-up/email',
-  '/sign-up/birth': '/sign-up/nickname',
-  '/sign-up/gender': '/sign-up/birth',
-  '/sign-up/marital-status': '/sign-up/gender',
-  '/sign-up/marital-status/children': '/sign-up/marital-status',
-  '/sign-up/distance': '/sign-up/marital-status',
-  '/sign-up/values/1': '/sign-up/distance',
-  '/sign-up/values/2': '/sign-up/values/1',
-  '/sign-up/values/3': '/sign-up/values/2',
-  '/sign-up/values/4': '/sign-up/values/3',
+  '/signup/email': '/',
+  '/signup/nickname': '/signup/email',
+  '/signup/birth': '/signup/nickname',
+  '/signup/gender': '/signup/birth',
+  '/signup/marital-status': '/signup/gender',
+  '/signup/marital-status/children': '/signup/marital-status',
+  '/signup/distance': '/signup/marital-status',
+  '/signup/values/1': '/signup/distance',
+  '/signup/values/2': '/signup/values/1',
+  '/signup/values/3': '/signup/values/2',
+  '/signup/values/4': '/signup/values/3',
 };
 
 export function PreviousButton() {
