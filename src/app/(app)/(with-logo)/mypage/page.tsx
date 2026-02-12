@@ -81,7 +81,7 @@ export default function Page() {
           <div className="border-primary/10 bg-primary/3 flex flex-col gap-2 rounded-3xl border p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <h3 className="font-semibold">기본 프로필</h3>
+                <h3 className="text-base font-semibold">기본 프로필</h3>
                 <span className="text-muted-foreground text-xs">8/8</span>
               </div>
               <Link href="/mypage/profile/basic/edit?step=marital-status">
@@ -114,7 +114,7 @@ export default function Page() {
           <div className="border-primary/10 bg-primary/3 flex flex-col gap-2 rounded-3xl border p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <h3 className="font-semibold">생활 습관</h3>
+                <h3 className="text-base font-semibold">생활 습관</h3>
                 <span className="text-muted-foreground text-xs">6/6</span>
               </div>
               <Link href="/mypage/profile/habits/edit">
@@ -151,7 +151,7 @@ export default function Page() {
           <div className="border-primary/10 bg-primary/3 flex flex-col gap-2 rounded-3xl border p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <h3 className="font-semibold">커뮤니케이션 성향</h3>
+                <h3 className="text-base font-semibold">커뮤니케이션 성향</h3>
                 <span className="text-muted-foreground text-xs">4/4</span>
               </div>
               <Link href="/mypage/profile/communication/edit">
@@ -184,7 +184,7 @@ export default function Page() {
           <div className="border-primary/10 bg-primary/3 flex flex-col gap-2 rounded-3xl border p-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <h3 className="font-semibold">여가 생활</h3>
+                <h3 className="text-base font-semibold">여가 생활</h3>
                 <span className="text-muted-foreground text-xs">5/8</span>
               </div>
               <Link href="/mypage/profile/hobbies/edit">
