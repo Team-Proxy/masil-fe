@@ -20,9 +20,9 @@ export default function TopNavBarWithBack() {
     <header className={cn('bg-background sticky top-0 z-1', !isInView ? 'border-b' : '')}>
       <nav className="flex items-center gap-2 px-4 py-4">
         <button type="button" onClick={() => router.back()} aria-label="뒤로가기">
-          <ChevronLeftIcon size={20} />
+          <ChevronLeftIcon size={30} />
         </button>
-        <h1 className="text-base font-medium">{title}</h1>
+        <h3>{title}</h3>
       </nav>
     </header>
   );

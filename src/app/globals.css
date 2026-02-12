@@ -85,11 +85,6 @@ body {
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
 
-  /* --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0); */
-
   --primary: oklch(0.63 0.18 30); /* 따뜻한 코랄 레드 */
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.6 0.06 190);
