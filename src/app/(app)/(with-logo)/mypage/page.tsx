@@ -84,7 +84,7 @@ export default function Page() {
                 <h3 className="font-semibold">기본 프로필</h3>
                 <span className="text-muted-foreground text-xs">8/8</span>
               </div>
-              <Link href="/signup/values/2">
+              <Link href="/mypage/profile/basic/edit?step=marital-status">
                 <Button
                   variant="outline"
                   size="sm"
@@ -117,7 +117,7 @@ export default function Page() {
                 <h3 className="font-semibold">생활 습관</h3>
                 <span className="text-muted-foreground text-xs">6/6</span>
               </div>
-              <Link href="/signup/values/2">
+              <Link href="/mypage/profile/habits/edit">
                 <Button
                   variant="outline"
                   size="sm"
@@ -150,7 +150,7 @@ export default function Page() {
                 <h3 className="font-semibold">커뮤니케이션 성향</h3>
                 <span className="text-muted-foreground text-xs">4/4</span>
               </div>
-              <Link href="/signup/values/2">
+              <Link href="/mypage/profile/communication/edit">
                 <Button
                   variant="outline"
                   size="sm"
@@ -183,7 +183,7 @@ export default function Page() {
                 <h3 className="font-semibold">여가 생활</h3>
                 <span className="text-muted-foreground text-xs">5/8</span>
               </div>
-              <Link href="/signup/values/2">
+              <Link href="/mypage/profile/hobbies/edit">
                 <Button
                   variant="outline"
                   size="sm"
