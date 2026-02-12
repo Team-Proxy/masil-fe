@@ -35,7 +35,7 @@ const VALUES_3 = [
 ];
 
 const VALUES_4 = [
-  { key: '운동', label: ['런닝', '축구'] },
+  { key: '운동', label: ['런닝', '축구', '요가/스트레칭', '수영', '자전거'] },
   { key: '문화생활', label: ['책 읽기'] },
   { key: '음악', label: ['KPOP'] },
   { key: '취미', label: ['주 1-2회'] },
@@ -129,18 +129,22 @@ export default function Page() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {VALUES_2.map(({ key, label }, index) => (
-                <Popover key={`${key}-${index}`}>
-                  <PopoverTrigger asChild>
-                    <Badge variant="secondary" className="cursor-pointer px-2 text-base">
-                      {Array.isArray(label) ? label.join(' · ') : label}
-                    </Badge>
-                  </PopoverTrigger>
-                  <PopoverContent align="center" side="top" className="w-fit p-1.5 text-xs">
-                    <PopoverDescription>{key}</PopoverDescription>
-                  </PopoverContent>
-                </Popover>
-              ))}
+              {VALUES_2.flatMap(({ key, label }) => {
+                const labels = Array.isArray(label) ? label : [label];
+
+                return labels.map((item, idx) => (
+                  <Popover key={`${key}-${item}-${idx}`}>
+                    <PopoverTrigger asChild>
+                      <Badge variant="secondary" className="cursor-pointer px-2 text-base">
+                        {item}
+                      </Badge>
+                    </PopoverTrigger>
+                    <PopoverContent align="center" side="top" className="w-fit p-1.5 text-xs">
+                      <PopoverDescription>{key}</PopoverDescription>
+                    </PopoverContent>
+                  </Popover>
+                ));
+              })}
             </div>
           </div>
 
@@ -195,18 +199,22 @@ export default function Page() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {VALUES_4.map(({ key, label }, index) => (
-                <Popover key={`${key}-${index}`}>
-                  <PopoverTrigger asChild>
-                    <Badge variant="secondary" className="cursor-pointer px-2 text-base">
-                      {Array.isArray(label) ? label.join(' · ') : label}
-                    </Badge>
-                  </PopoverTrigger>
-                  <PopoverContent align="center" side="top" className="w-fit p-1.5 text-xs">
-                    <PopoverDescription>{key}</PopoverDescription>
-                  </PopoverContent>
-                </Popover>
-              ))}
+              {VALUES_4.flatMap(({ key, label }) => {
+                const labels = Array.isArray(label) ? label : [label];
+
+                return labels.map((item, idx) => (
+                  <Popover key={`${key}-${item}-${idx}`}>
+                    <PopoverTrigger asChild>
+                      <Badge variant="secondary" className="cursor-pointer px-2 text-base">
+                        {item}
+                      </Badge>
+                    </PopoverTrigger>
+                    <PopoverContent align="center" side="top" className="w-fit p-1.5 text-xs">
+                      <PopoverDescription>{key}</PopoverDescription>
+                    </PopoverContent>
+                  </Popover>
+                ));
+              })}
             </div>
           </div>
         </div>
