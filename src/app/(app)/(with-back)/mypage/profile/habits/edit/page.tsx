@@ -97,7 +97,7 @@ export default function Page() {
   };
 
   return (
-    <div className="px-4">
+    <div>
       <h1 className="pb-6">일상과 가치관에 대해 조금 더 알려주세요.</h1>
       <div className="text-muted-foreground pb-4 text-sm">
         함께 지낼 때 중요한 생활 습관과 기준입니다.

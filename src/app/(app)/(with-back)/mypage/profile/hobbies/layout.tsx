@@ -5,7 +5,7 @@ export default function MypageProfileBasicLayout({ children }: { children: React
   return (
     <HeaderTitleProvider title="여가 생활 수정">
       <TopNavBarWithBack />
-      <main id="scroll-container" className="flex flex-1 flex-col overflow-y-auto">
+      <main id="scroll-container" className="flex flex-1 flex-col overflow-y-auto px-4">
         <div id="scroll-sentinel" aria-hidden className="h-px" />
         {children}
       </main>

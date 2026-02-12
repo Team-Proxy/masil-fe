@@ -75,7 +75,7 @@ export default function Page() {
   };
 
   return (
-    <div className="px-4">
+    <div>
       <h1>사람을 대하는 방식에 대해 알려주세요.</h1>
       <div className="text-muted-foreground pb-4 text-sm">
         정답은 없습니다.

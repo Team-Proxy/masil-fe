@@ -52,7 +52,7 @@ export default function Page() {
   };
 
   return (
-    <div className="px-4">
+    <div>
       <h1>평소 여가 시간에 즐기는 활동을 알려주세요.</h1>
       <div className="text-muted-foreground pb-4 text-sm">
         자주 하거나 좋아하는 활동을 골라주세요.
