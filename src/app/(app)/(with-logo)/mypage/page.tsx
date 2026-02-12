@@ -74,7 +74,7 @@ export default function Page() {
         <p className="text-muted-foreground py-4 text-sm">
           인연을 만날 확률을 높이려면 상세한 프로필 작성이 중요합니다.
           <br />
-          카테고리별로 정보를 입력해주세요.
+          카테고리별로 정보를 입력해 주세요.
         </p>
 
         <div className="flex flex-col gap-4">
